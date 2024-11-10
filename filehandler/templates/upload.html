@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Page</title>
+    <!-- Link to the static CSS file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Upload Your Files</h1>
+    
+    <!-- Form for file upload -->
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="file">Choose a file to upload:</label>
+        <input type="file" name="file" id="file">
+        <button type="submit">Upload</button>
+    </form>
+
+    <!-- Link to the static JS file -->
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
